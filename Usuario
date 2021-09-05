@@ -1,0 +1,54 @@
+package turismo;
+
+public class Usuario {
+	private String nombre = " ";
+	private int presupuesto = 0;
+	private double tiempoDisponible = 0;
+	protected String tipoDeAtraccion = " ";
+
+	public Usuario(String nombre, int presupuesto, double tiempoDisponible, String tipoDeAtraccion) {
+		setNombre(nombre);
+		setPresupuesto(presupuesto);
+		setTiempoDisponible(tiempoDisponible);
+		setTipoDeAtraccion(tipoDeAtraccion);
+	}
+
+	public int getPresupuesto() {
+		return presupuesto;
+	}
+
+	public void setPresupuesto(int presupuesto) {
+		if(presupuesto <= 0)
+			throw new Error("No tiene un peso.");
+		this.presupuesto = presupuesto;
+	}
+
+	public double getTiempoDisponible() {
+		return tiempoDisponible;
+	}
+
+	public void setTiempoDisponible(double tiempoDisponible) {
+		if(tiempoDisponible <= 0)
+			throw new Error("No tiene tiempo.");
+		this.tiempoDisponible = tiempoDisponible;
+	}
+
+	public String getTipoDeAtraccion() {
+		return tipoDeAtraccion;
+	}
+
+	public void setTipoDeAtraccion(String tipoDeAtraccion) {
+		if(tipoDeAtraccion != "Aventura" || tipoDeAtraccion != "Paisaje" || tipoDeAtraccion != "Degustación"  )
+			throw new Error("Tipo de atracción no válido.");
+		this.tipoDeAtraccion = tipoDeAtraccion;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+}
