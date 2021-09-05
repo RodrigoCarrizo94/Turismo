@@ -1,0 +1,47 @@
+package turismo;
+
+public class Atraccion {
+	private int costo = 0;
+	private double tiempoPromedio = 0;
+	private int personasXdia = 0;
+	private String tipoDeAtraccion = " ";
+
+	public Atraccion(int costo, double tiempoPromedio, int personasXdia, String tipoDeAtraccion) {
+			setCosto(costo);
+			setTiempoPromedio(tiempoPromedio);
+			setPersonasXdia(personasXdia);
+			setTipoDeAtraccion(tipoDeAtraccion);
+	}
+	
+	public int getCosto() {
+		return costo;
+	}
+
+	public void setCosto(int costo) {
+		this.costo = costo;
+	}
+
+	public double getTiempoPromedio() {
+		return tiempoPromedio;
+	}
+
+	public void setTiempoPromedio(double tiempoPromedio) {
+		this.tiempoPromedio = tiempoPromedio;
+	}
+
+	public int getPersonasXdia() {
+		return personasXdia;
+	}
+
+	public void setPersonasXdia(int personasXdia) {
+		this.personasXdia = personasXdia;
+	}
+
+	public String getTipoDeAtraccion() {
+		return tipoDeAtraccion;
+	}
+
+	public void setTipoDeAtraccion(String tipoDeAtraccion) {
+		this.tipoDeAtraccion = tipoDeAtraccion;
+	}
+}
